@@ -11,9 +11,7 @@
     "scripts": {
         "start": "concurrently \"webpack-dev-server --inline --progress --port 5003\" \"dotnet run\" ",
         "webpack-dev": "set NODE_ENV=development && webpack --progress --profile",
-        "webpack-production": "set NODE_ENV=production && webpack --progress --profile",
-        "build-dev": "set LOCALE=fr && npm run --silent webpack-dev",
-        "build-production": "npm run --silent webpack-production"
+        "webpack-production": "set NODE_ENV=production && webpack --progress --profile"
     },
     "dependencies": {
         "@angular/animations": "^12.2.11",
