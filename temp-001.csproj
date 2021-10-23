@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <Copyright>Marquis Imprimeur - Laurentien</Copyright>
+    <AssemblyTitle>B4 Application</AssemblyTitle>
+    <!-- //CFG -->
+    <VersionPrefix>4.7.2.3</VersionPrefix>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>User-Secret-ID</UserSecretsId>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>temp-001</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <DebugType>portable</DebugType>
+    <PackageId>temp-001</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="node_modules" />
+    <None Update="wwwroot\**\*;Views;Areas\**\Views">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.3" />
+  </ItemGroup>
+
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+  </Target>
+
+</Project>
